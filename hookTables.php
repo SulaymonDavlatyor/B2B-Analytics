@@ -243,10 +243,6 @@ as $key => $lead) {
     }
 
 
-    $opTime = 1111111;
-    $successTime = 11111111;
-    $billTime = 11111111;
-    $kpTime = 444444444;
     $diffTime = date('d', ($succesTime - $opTime));
     $opTime = date('d-m-Y', $opTime);
     $succesTime = date('d-m-Y', $succesTime);
@@ -270,7 +266,6 @@ as $key => $lead) {
 
 
     if ($lead['status_id'] != 142) {
-        //TODO ДАТА ОТПРАВКИ КП УЗНАЙ
         $monthPotentialArr = [$date, $leadId, $companyName, $leadLink, $b2bSource, $courses, $direction, $respUser, $opTime, $kpTime, $leadPrice, $billTime];
         $productSales = new basicTableClass('Лист4');
         $productSales->fillTable($productSalesArr);
